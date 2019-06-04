@@ -1,0 +1,45 @@
+==> Starting Consul agent...
+==> Starting Consul agent RPC...
+==> Consul agent running!
+         Node name: 'bimal'
+        Datacenter: 'dc1'
+            Server: true (bootstrap: false)
+       Client Addr: 127.0.0.1 (HTTP: 8500, HTTPS: -1, DNS: 8600, RPC: 8400)
+      Cluster Addr: 127.0.0.1 (LAN: 8301, WAN: 8302)
+    Gossip encrypt: false, RPC-TLS: false, TLS-Incoming: false
+             Atlas: <disabled>
+
+==> Log data will now stream in as it occurs:
+
+    2019/06/04 20:48:05 [INFO] raft: Node at 127.0.0.1:8300 [Follower] entering Follower state
+    2019/06/04 20:48:05 [INFO] serf: EventMemberJoin: bimal 127.0.0.1
+    2019/06/04 20:48:05 [INFO] serf: EventMemberJoin: bimal.dc1 127.0.0.1
+    2019/06/04 20:48:05 [INFO] consul: adding LAN server bimal (Addr: 127.0.0.1:8300) (DC: dc1)
+    2019/06/04 20:48:05 [INFO] consul: adding WAN server bimal.dc1 (Addr: 127.0.0.1:8300) (DC: dc1)
+    2019/06/04 20:48:05 [ERR] agent: failed to sync remote state: No cluster leader
+    2019/06/04 20:48:07 [WARN] raft: Heartbeat timeout reached, starting election
+    2019/06/04 20:48:07 [INFO] raft: Node at 127.0.0.1:8300 [Candidate] entering Candidate state
+    2019/06/04 20:48:07 [DEBUG] raft: Votes needed: 1
+    2019/06/04 20:48:07 [DEBUG] raft: Vote granted from 127.0.0.1:8300. Tally: 1
+    2019/06/04 20:48:07 [INFO] raft: Election won. Tally: 1
+    2019/06/04 20:48:07 [INFO] raft: Node at 127.0.0.1:8300 [Leader] entering Leader state
+    2019/06/04 20:48:07 [INFO] raft: Disabling EnableSingleNode (bootstrap)
+    2019/06/04 20:48:07 [INFO] consul: cluster leadership acquired    2019/06/04 20:48:07 [DEBUG] raft: Node 127.0.0.1:8300 updated peer set (2): [127.0.0.1:8300]
+
+    2019/06/04 20:48:07 [INFO] consul: New leader elected: bimal
+    2019/06/04 20:48:07 [DEBUG] consul: reset tombstone GC to index 2
+    2019/06/04 20:48:07 [INFO] consul: member 'bimal' joined, marking health alive
+    2019/06/04 20:48:09 [INFO] agent: Synced service 'consul'
+    2019/06/04 20:49:27 [DEBUG] agent: Service 'consul' in sync
+    2019/06/04 20:50:27 [DEBUG] http: Request GET /v1/catalog/datacenters (52.434µs) from=127.0.0.1:50246
+    2019/06/04 20:50:27 [DEBUG] http: Request GET /v1/catalog/datacenters (57.284µs) from=127.0.0.1:50246
+    2019/06/04 20:50:27 [DEBUG] http: Request GET /v1/internal/ui/nodes?dc=dc1&token=<hidden> (636.381µs) from=127.0.0.1:50246
+    2019/06/04 20:50:27 [DEBUG] http: Request GET /v1/internal/ui/services?dc=dc1&token=<hidden> (105.587µs) from=127.0.0.1:50246
+    2019/06/04 20:50:41 [DEBUG] agent: Service 'consul' in sync
+    2019/06/04 20:52:39 [DEBUG] agent: Service 'consul' in sync
+    2019/06/04 20:54:11 [DEBUG] agent: Service 'consul' in sync
+    2019/06/04 20:55:42 [DEBUG] agent: Service 'consul' in sync
+    2019/06/04 20:57:26 [DEBUG] agent: Service 'consul' in sync
+    2019/06/04 20:59:04 [DEBUG] agent: Service 'consul' in sync
+    2019/06/04 21:00:55 [DEBUG] agent: Service 'consul' in sync
+    2019/06/04 21:02:00 [DEBUG] agent: Service 'consul' in sync
